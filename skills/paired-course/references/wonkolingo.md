@@ -118,4 +118,10 @@ A lesson's recording lives in WonkoLingo next to its cards.
 
 ## 7. If the app already has a course on the topic
 
-WonkoLingo has built-in courses, mostly on AI policy, Congress and US democracy. If one fits a week's theme, the learner can switch it on in their daily mix and you write episodes that follow its lessons, with no new cards. Only do this if you can see the cards themselves; an episode has to teach every card in its lesson.
+WonkoLingo has built-in courses, mostly on AI policy, Congress and US democracy. Check them before writing any card:
+
+- https://wonkolingo.com/library/index.md lists every course with its level, description and lesson titles. It is small; read it whole.
+- `https://wonkolingo.com/library/<key>.json` is one course, with each card's `id`, question (`q`), right answer (`a`) and explanation (`x`).
+- https://wonkolingo.com/plan-guide.md explains how to build a plan from existing cards.
+
+If a course fits a week's theme, the learner switches it on in their daily mix and you write episodes that follow its lessons, with no new cards. Read the cards from the course's library file first; an episode has to teach every card in its lesson. If only part of a course fits, name the lessons to play. Write new cards only for what the library does not cover, and never for a fact it already has a card on.

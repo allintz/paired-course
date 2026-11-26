@@ -64,16 +64,18 @@ Find out:
 5. **Coming up.** Deadlines or events in the next two months they want to be ready for.
 6. **Fit.** Episode length, which days they listen, and how many new cards an evening is comfortable (default 5).
 7. **How they will listen.** See "Getting the episode to their ears" below. Settle this once and record it.
-8. **WonkoLingo.** Whether they have the app and an account, and whether it already has a course on their topic (the app's course list shows them). If they already listen to another series in the same podcast feed, pick episode titles that cannot be confused with it.
+8. **WonkoLingo.** Whether they have the app and an account, and whether it already has a course on their topic (read https://wonkolingo.com/library/index.md; do not rely on memory). If they already listen to another series in the same podcast feed, pick episode titles that cannot be confused with it.
 
 Then write `profile.md` and `outline.md` from the templates, say the goal back in one sentence, show the four-week outline as a short list, and ask what to change. Only week one needs to be right.
 
 ## Cards: two ways to pair
 
-Pick one per week and record it in `plan.md`.
+Look in WonkoLingo's library before writing a single card. Every course and lesson is listed at https://wonkolingo.com/library/index.md, and each course's cards (id, question, answer, explanation) are at `https://wonkolingo.com/library/<key>.json`. A library card is already researched and fact-checked, and writing your own on the same law or idea means the learner gets asked it twice. Use existing lessons where they fit and write new cards only for the gaps. https://wonkolingo.com/plan-guide.md has the full method.
+
+Then pick one of these per week and record it in `plan.md`.
 
 - **Own course (the usual case).** Write five cards per episode: one lesson per episode, one unit per week, all in one personal course. Five matches WonkoLingo's default of five new cards a day per course, so each evening serves that morning's lesson with no setup. Give each lesson an `episode` id and the matching recording, and the app holds that lesson's cards until the episode is heard. If the learner misses a morning, the cards wait for them. If they miss an evening, the cards fall a day behind the audio. Tell the learner both things at setup, and that "Quiz me anyway" is there when they would rather skip an episode.
-- **A course WonkoLingo already has.** If the app already has a course on the week's theme, the episodes can follow its lessons in order and no new cards are needed. The learner switches that course on in their daily mix. You need the course's cards to do this (the learner can tell you the lesson titles, or you may have the course file); every episode has to teach every card in its lesson. If you cannot see the cards, write an own course instead.
+- **A course WonkoLingo already has.** If the app already has a course on the week's theme, the episodes can follow its lessons in order and no new cards are needed. The learner switches that course on in their daily mix. Read the course's cards from its library file first; every episode has to teach every card in its lesson. If you cannot fetch the cards, write an own course instead.
 
 `references/wonkolingo.md` has the card rules, the file format, and the exact steps for the learner to add the course and each later week.
 
