@@ -22,6 +22,8 @@ SKILL_DIR/scripts/setup_audio.sh
 
 This installs Kokoro, a free open-source voice model that runs on their computer (about 120 MB, macOS or Linux), into `~/.cache/kokoro`. It needs `ffmpeg` and Python 3 and says how to get ffmpeg if it is missing. If the install fails on a very new Python, install `uv` (https://docs.astral.sh/uv/) and run it again; the script then uses Python 3.12. On Windows, run all of this inside WSL.
 
+On a fresh Ubuntu or Debian machine, install `ffmpeg` and `python3-venv` first. The setup, MP3 generation, and RSS feed were tested together on Ubuntu 24.04 (ARM64).
+
 From then on, run the audio script with `~/.cache/kokoro/venv/bin/python`.
 
 ### 2. A place to host the files
