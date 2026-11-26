@@ -62,7 +62,7 @@ Find out:
 5. **Coming up.** Deadlines or events in the next two months they want to be ready for.
 6. **Fit.** Episode length, which days they listen, and how many new cards an evening is comfortable (default 5).
 7. **How they will listen.** See "Getting the episode to their ears" below. Settle this once and record it.
-8. **WonkoLingo.** Whether they have the app and an account, and whether it already has a course on their topic (the app's course list shows them).
+8. **WonkoLingo.** Whether they have the app and an account, and whether it already has a course on their topic (the app's course list shows them). If they already listen to another series in the same podcast feed, pick episode titles that cannot be confused with it.
 
 Then write `profile.md` and `outline.md` from the templates, say the goal back in one sentence, show the four-week outline as a short list, and ask what to change. Only week one needs to be right.
 
@@ -111,9 +111,9 @@ Show the learner the titles with a line each and wait for an OK or edits before 
 For each of the five days, in this order:
 
 1. **Fact sheet** (`dN-<slug>.facts.md`). Every fact the episode and its cards will use, each with a source link, primary sources first. Mark anything contested with whose view it is.
-2. **Fact-check.** A separate pass checks each fact against its source. A fresh subagent is best if you have one, since it has not seen your reasoning. Drop what cannot be confirmed. Record in the sheet how it was checked, and say plainly when no expert has reviewed it.
+2. **Fact-check.** A separate pass checks each fact against its source by opening it, not from memory. A fresh subagent is best if you have one, since it has not seen your reasoning. Ask it two extra things: what has happened on this topic recently (your own knowledge stops at your training date, and a listener will notice a missing recent event), and whether each link actually opens. Drop what cannot be confirmed. Record in the sheet how it was checked, and say plainly when no expert has reviewed it. Expect corrections: in the first week this skill was used, about one fact in six needed one.
 3. **Cards**, written only from the fact sheet.
-4. **Script**, written only from the fact sheet, so the quiz never asks what the episode did not say. Check that every card's answer is said out loud in the episode.
+4. **Script**, written only from the fact sheet, so the quiz never asks what the episode did not say. Check that every card's answer is said out loud in the episode. Stories pull in extra details as you write; anything in a script or a card's explanation that is not on the fact sheet goes back to step 2 before audio.
 5. **Audio.**
 
 Writing both halves from one checked sheet is the heart of this skill: each fact is verified once, and the morning and evening can never disagree.
