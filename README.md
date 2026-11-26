@@ -28,7 +28,7 @@ The learner listens, taps and answers a few questions a week. The assistant does
 
 You also need a free WonkoLingo account to add your course, and some way to listen:
 
-- **With an assistant that can run commands on your computer** (such as Claude Code), it sets up your own podcast feed: a free voice model on your machine makes the audio, the files go on free hosting such as GitHub Pages, and you follow one address in your podcast app.
+- **With an assistant that can run commands on your computer** (such as Claude Code), a free voice model on your machine makes each episode as an MP3. You upload the week's recordings to WonkoLingo with the cards, and they play there: the app holds each lesson's cards until you have listened, and the iPhone app sends a notification each morning with the day's episode. It can also set up a podcast feed on free hosting if you would rather use your podcast app.
 - **With a chat-only assistant**, it gives you each script to play with a read-aloud app.
 
 ## Honest limits
@@ -36,5 +36,6 @@ You also need a free WonkoLingo account to add your course, and some way to list
 - Scripts and cards are fact-checked by the AI against sources it links, not by a person. Treat them as a good briefing, not an authority.
 - The podcast feed is unlisted, not private: anyone with its address can listen.
 - The audio setup script has been run on one Mac. It should work on Linux too but has not been tried there.
-- Adding each week's cards to WonkoLingo is one upload by hand. The assistant cannot do it for you.
+- Adding each week's cards and recordings to WonkoLingo is one upload by hand. The assistant cannot do it for you.
+- Episodes in WonkoLingo play on the Today screen only, and need a connection. Playing with the phone locked is new and has not been tried on many phones.
 - The assistant cannot see your quiz results unless you tell it how the week went.

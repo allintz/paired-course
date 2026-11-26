@@ -17,7 +17,7 @@ One personal course per learner, growing by one unit a week:
 
 - **Course `id`:** distinctive, lowercase letters, numbers and hyphens, 2 to 40 characters, for example `sam-energy-policy`. It never changes; uploading a file with the same `id` replaces the learner's earlier version.
 - **One unit per week**, titled with the week's theme.
-- **One lesson per episode**, with the same title as the episode.
+- **One lesson per episode**, with the same title as the episode, and an `"episode"` id that names its recording (section 6).
 - **Five questions per lesson.** WonkoLingo serves five new cards a day per course by default, so five cards means each evening gets exactly that morning's lesson.
 - **Limits:** at most 12 units, 8 lessons per unit, 400 questions and 200 KB per course. After twelve weeks, start a second course (`sam-energy-policy-2`).
 
@@ -28,7 +28,7 @@ Every question needs a permanent `id` that describes it (`sunset-clause-purpose`
 The guide's writing rules matter more than its format rules. The ones that decide whether a card is any good:
 
 - **Only ask what the episode said.** Write cards from the same checked fact sheet as the script.
-- **Every card works for someone who missed the episode.** The app cannot tell whether they listened. Test each card by imagining a learner who skipped that morning: the question must give enough context to make a fair guess from the options, and the explanation `x` must teach the idea in full, with the example, so they have learned it by the time the card comes back. Never test a detail that only the episode's story supplied (a name, a date, an anecdote) unless the explanation tells that story too.
+- **Every card works for someone who missed the episode.** The app holds a lesson's cards until its episode is heard, but the learner can tap "Quiz me anyway", or may have listened half asleep. Test each card by imagining a learner who skipped that morning: the question must give enough context to make a fair guess from the options, and the explanation `x` must teach the idea in full, with the example, so they have learned it by the time the card comes back. Never test a detail that only the episode's story supplied (a name, a date, an anecdote) unless the explanation tells that story too.
 - **Plain words.** Short sentences, no jargon unless the term is the point of the card.
 - **A concrete example on every card:** a real law, case, company or event, usually in the explanation `x`.
 - **One idea per card.** Split anything that asks two things.
@@ -59,6 +59,7 @@ The guide's writing rules matter more than its format rules. The ones that decid
       "lessons": [
         {
           "title": "The National Environmental Policy Act",
+          "episode": "w1d1-nepa",
           "items": [
             {
               "id": "nepa-what-it-requires",
@@ -84,11 +85,12 @@ Then tell the learner, in these words or close to them:
 
 1. Open WonkoLingo and sign in.
 2. Go to **Courses** and choose **+ Make one**.
-3. Upload the file, or paste its contents into the box.
+3. Choose the course file and the week's recordings together, or drop them all on that screen. The app says if a recording is missing.
 4. If the app lists problems, send them to me. (They look like `units[0].lessons[1].items[2].a: ...`. Fix exactly those and give a new file.)
 5. Check the course is in your daily mix at 5 new cards a day.
+6. Each morning, open Today and play the episode. Its cards join your session once you have listened.
 
-If you can't create files, give the whole course in one code block for them to paste.
+If you can't create files, give the whole course in one code block for them to paste. Pasting carries no recordings, so leave `episode` off the lessons in that case.
 
 ## 5. Every later week: only the new unit
 
@@ -98,10 +100,22 @@ Do not send the whole course again. Give a small file with just the new week:
 { "units": [ { "title": "Week 2: Transmission lines", "desc": "...", "lessons": [ ...five lessons... ] } ] }
 ```
 
-The learner opens the course's page in the app, chooses **Add questions**, and uploads or pastes it. The new unit goes at the end. Also add the unit to your own full copy of the course (`course.json`), so you always know every `id` already used and can rebuild the course if needed.
+The learner opens the course's page in the app, chooses **Add questions**, and uploads it together with that week's recordings. The new unit goes at the end. Also add the unit to your own full copy of the course (`course.json`), so you always know every `id` already used and can rebuild the course if needed.
 
 To fix one card, send `{ "items": [ { ...the corrected question with its existing id... } ] }` through **Add questions**. A question with the `id` of one already in the course replaces it.
 
-## 6. If the app already has a course on the topic
+## 6. Episodes: the recordings
+
+A lesson's recording lives in WonkoLingo next to its cards.
+
+- In the course file, give the lesson an id: `{ "title": "The National Environmental Policy Act", "episode": "w1d1-nepa", "items": [ ... ] }`. Ids are 1 to 40 lowercase letters, numbers or hyphens, and unique within the course.
+- The recording is a separate MP3 or M4A file named after that id: `w1d1-nepa.mp3`. It never goes inside the JSON. Each can be up to 25 MB; a 15-minute episode of speech at 64 kbps mono is about 7 MB.
+- The learner uploads the recordings on the same screen as the course file, in the same step. If one is missing, the app names it and will not save until it is there. Uploading a file with the same name again replaces that episode.
+- In the app, Today shows the next episode with a player (pause, skip, speed; it remembers where they stopped). When it has played nearly to the end, that lesson's new cards join the daily round. "Quiz me anyway" releases them without listening. Reviews of earlier cards are never held back.
+- In the iPhone app, a notification each morning names the day's episode, if the learner has reminders switched on. The episode card offers to switch them on. The website has no morning notification.
+- Only people who can see the course can play its episodes. For a personal course that is the learner alone.
+- Leave `episode` off a lesson that has no recording. Its cards then arrive in the usual way.
+
+## 7. If the app already has a course on the topic
 
 WonkoLingo has built-in courses, mostly on AI policy, Congress and US democracy. If one fits a week's theme, the learner can switch it on in their daily mix and you write episodes that follow its lessons, with no new cards. Only do this if you can see the cards themselves; an episode has to teach every card in its lesson.

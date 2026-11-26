@@ -7,16 +7,18 @@ description: Set up and run a personal "paired course" for a busy person - a sho
 
 A paired course is for someone who has almost no spare time but wants to keep getting better at something they care about. They listen for 10 to 15 minutes in the morning and answer quiz cards on the same material in the evening, in [WonkoLingo](https://wonkolingo.com), a free spaced-repetition quiz app that accepts custom courses. Hearing an idea and then having to recall it a few hours later is what makes it stick, so the two halves must always match.
 
-They must also each work alone. People miss mornings. The app has no idea whether an episode was heard, so on a missed day the learner meets that day's cards cold. A card that only makes sense to someone who listened is a broken card: every card has to be answerable, and teach its idea in its explanation, for someone who has not heard the episode. The episode makes the cards easier; it is never what makes them possible.
+WonkoLingo can hold the episodes too. A lesson can carry its recording; the app shows it on the Today screen with a player, and keeps that lesson's new cards back until the learner has listened to nearly the end. So a missed morning delays the cards instead of handing them over cold. On the iPhone app a notification each morning names the day's episode.
+
+The two halves must still each work alone. The learner can tap "Quiz me anyway", and some will listen somewhere the app cannot see. A card that only makes sense to someone who listened is a broken card: every card has to be answerable, and teach its idea in its explanation, for someone who has not heard the episode. The episode makes the cards easier; it is never what makes them possible.
 
 Everything else is your job. The learner's whole effort is:
 
 | When | What | How long |
 |---|---|---|
 | Once | Setup interview | about 10 minutes |
-| Each morning | Listen to one episode | 10 to 15 minutes |
+| Each morning | Listen to one episode, in WonkoLingo | 10 to 15 minutes |
 | Each evening | That episode's cards in WonkoLingo, plus reviews | about 5 minutes |
-| Once a week | Check-in, then add the new week's cards to the app | about 5 minutes |
+| Once a week | Check-in, then add the new week's cards and recordings to the app | about 5 minutes |
 
 Protect that budget. Never give the learner homework, reading, or a form to fill in. If they skip a check-in, carry on with the outline as it stands. Ask for a decision only when the answer changes what gets made.
 
@@ -70,7 +72,7 @@ Then write `profile.md` and `outline.md` from the templates, say the goal back i
 
 Pick one per week and record it in `plan.md`.
 
-- **Own course (the usual case).** Write five cards per episode: one lesson per episode, one unit per week, all in one personal course. Five matches WonkoLingo's default of five new cards a day per course, so each evening serves that morning's lesson with no setup. If the learner misses an evening, the cards fall a day behind the audio. If they miss a morning, the cards arrive anyway, which is why each one must work without the episode. Tell the learner both things at setup, and that listening late still helps: the episode then works as the review.
+- **Own course (the usual case).** Write five cards per episode: one lesson per episode, one unit per week, all in one personal course. Five matches WonkoLingo's default of five new cards a day per course, so each evening serves that morning's lesson with no setup. Give each lesson an `episode` id and the matching recording, and the app holds that lesson's cards until the episode is heard. If the learner misses a morning, the cards wait for them. If they miss an evening, the cards fall a day behind the audio. Tell the learner both things at setup, and that "Quiz me anyway" is there when they would rather skip an episode.
 - **A course WonkoLingo already has.** If the app already has a course on the week's theme, the episodes can follow its lessons in order and no new cards are needed. The learner switches that course on in their daily mix. You need the course's cards to do this (the learner can tell you the lesson titles, or you may have the course file); every episode has to teach every card in its lesson. If you cannot see the cards, write an own course instead.
 
 `references/wonkolingo.md` has the card rules, the file format, and the exact steps for the learner to add the course and each later week.
@@ -118,7 +120,7 @@ For each of the five days, in this order:
 
 Writing both halves from one checked sheet is the heart of this skill: each fact is verified once, and the morning and evening can never disagree.
 
-When all five days are written, put the week's lessons together as `unit.json`, add the unit to `course.json`, and walk the learner through adding it to the app (one upload, under a minute).
+When all five days are written, put the week's lessons together as `unit.json`, add the unit to `course.json`, and put the five recordings in the same folder, each named after its lesson's `episode` id. Walk the learner through adding them to the app together (one upload, about a minute).
 
 ### Episode shape
 
@@ -134,13 +136,13 @@ Write for the ear: short sentences, one idea each; say where you are ("first", "
 
 ### Getting the episode to their ears
 
-Use the best route this session and this person have, and record it in `profile.md`:
+Record the route in `profile.md`. All of them start the same way: turn each script into an MP3 or M4A file. Use a text-to-speech tool this session already has, or `scripts/setup_audio.sh` and `scripts/make_audio.py` (a free local voice model; `references/podcast.md` explains them). Keep each file under 25 MB; 64 kbps mono is plenty for speech.
 
-1. **A podcast or text-to-speech skill or tool already in this session.** Use it.
-2. **Their own private podcast feed.** If you can run commands on their computer, set this up once with `references/podcast.md`: a free local voice model makes the audio, the files go on a free static host, and the learner follows one feed address in their podcast app. After that, episodes just appear on their phone. `scripts/make_audio.py` and `scripts/build_feed.py` do the work.
-3. **No audio tools.** Hand over each script as plain text and have them use a read-aloud app or their phone's screen reader. This is still a paired course.
+1. **In WonkoLingo (the default).** Name each file after its lesson's `episode` id and have the learner upload the recordings with the week's cards (`references/wonkolingo.md`, sections 4 to 6). They play on the Today screen, the app knows what has been heard, and nothing else needs setting up.
+2. **A private podcast feed as well, or instead.** Some people would rather use their podcast app. If you can run commands on their computer, `references/podcast.md` sets up a feed on free hosting. Listening there is invisible to WonkoLingo, so either leave `episode` off the lessons (the cards then arrive each evening whatever happened) or tell the learner to tap "Quiz me anyway".
+3. **No way to make audio.** Hand over each script as plain text for a read-aloud app or the phone's screen reader, and leave `episode` off the lessons. This is still a paired course.
 
-Title episodes so the order is obvious, for example "W1 D2: The National Emergencies Act". A feed address is unlisted, not private: anyone who has it can listen. So scripts, titles and descriptions must never include what the learner told you about their job or their gaps. Say "you" and keep it general.
+Title episodes so the order is obvious, for example "W1 D2: The National Emergencies Act". An episode in WonkoLingo can only be played by people who can see the course. A feed address is unlisted, not private: anyone who has it can listen. Either way, scripts, titles and descriptions must never include what the learner told you about their job or their gaps. Say "you" and keep it general.
 
 ### Review day
 
