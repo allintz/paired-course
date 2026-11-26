@@ -28,6 +28,7 @@ Protect that budget. Never give the learner homework, reading, or a form to fill
 - `references/podcast.md`: how to turn a script into audio and give the learner a private podcast feed. Read it before making audio, unless this session already has its own podcast tool.
 - `scripts/`: `setup_audio.sh`, `make_audio.py`, `build_feed.py`, used by `references/podcast.md`.
 - `references/templates.md`: the shape of every file below.
+- `references/agents.md`: model setup and how to divide course construction. Read it before drafting an outline or a new week.
 - Each learner has a folder. Use `paired-course/<name>/` wherever this person keeps working files, and ask once if that is unclear. In a chat with no file access, keep the profile, outline and log in one document the person can paste back next time.
 
 ```
@@ -112,10 +113,10 @@ Show the learner the titles with a line each and wait for an OK or edits before 
 
 ## Make the week
 
-For each of the five days, in this order:
+After the learner approves the week, have the lead assign each independent episode to an Opus worker. The lead checks the workers' evidence, resolves overlap, and assembles the week. Follow `references/agents.md` for the handoff. For each day, in this order:
 
 1. **Fact sheet** (`dN-<slug>.facts.md`). Every fact the episode and its cards will use, each with a source link, primary sources first. Mark anything contested with whose view it is.
-2. **Fact-check.** A separate pass checks each fact against its source by opening it, not from memory. A fresh subagent is best if you have one, since it has not seen your reasoning. Ask it two extra things: what has happened on this topic recently (your own knowledge stops at your training date, and a listener will notice a missing recent event), and whether each link actually opens. Drop what cannot be confirmed. Record in the sheet how it was checked, and say plainly when no expert has reviewed it. Expect corrections: in the first week this skill was used, about one fact in six needed one.
+2. **Fact-check.** The lead opens the sources and checks the claims independently of the worker who drafted them. Verify that each link works and check for recent changes that would date the facts or leave an important gap. Drop what cannot be confirmed. Record in the sheet how it was checked, and say plainly when no expert has reviewed it.
 3. **Cards**, written only from the fact sheet.
 4. **Script**, written only from the fact sheet, so the quiz never asks what the episode did not say. Check that every card's answer is said out loud in the episode. Stories pull in extra details as you write; anything in a script or a card's explanation that is not on the fact sheet goes back to step 2 before audio.
 5. **Audio.**
