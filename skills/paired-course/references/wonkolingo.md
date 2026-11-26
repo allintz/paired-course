@@ -28,6 +28,7 @@ Every question needs a permanent `id` that describes it (`sunset-clause-purpose`
 The guide's writing rules matter more than its format rules. The ones that decide whether a card is any good:
 
 - **Only ask what the episode said.** Write cards from the same checked fact sheet as the script.
+- **Every card works for someone who missed the episode.** The app cannot tell whether they listened. Test each card by imagining a learner who skipped that morning: the question must give enough context to make a fair guess from the options, and the explanation `x` must teach the idea in full, with the example, so they have learned it by the time the card comes back. Never test a detail that only the episode's story supplied (a name, a date, an anecdote) unless the explanation tells that story too.
 - **Plain words.** Short sentences, no jargon unless the term is the point of the card.
 - **A concrete example on every card:** a real law, case, company or event, usually in the explanation `x`.
 - **One idea per card.** Split anything that asks two things.

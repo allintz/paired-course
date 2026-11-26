@@ -7,6 +7,8 @@ description: Set up and run a personal "paired course" for a busy person - a sho
 
 A paired course is for someone who has almost no spare time but wants to keep getting better at something they care about. They listen for 10 to 15 minutes in the morning and answer quiz cards on the same material in the evening, in [WonkoLingo](https://wonkolingo.com), a free spaced-repetition quiz app that accepts custom courses. Hearing an idea and then having to recall it a few hours later is what makes it stick, so the two halves must always match.
 
+They must also each work alone. People miss mornings. The app has no idea whether an episode was heard, so on a missed day the learner meets that day's cards cold. A card that only makes sense to someone who listened is a broken card: every card has to be answerable, and teach its idea in its explanation, for someone who has not heard the episode. The episode makes the cards easier; it is never what makes them possible.
+
 Everything else is your job. The learner's whole effort is:
 
 | When | What | How long |
@@ -68,7 +70,7 @@ Then write `profile.md` and `outline.md` from the templates, say the goal back i
 
 Pick one per week and record it in `plan.md`.
 
-- **Own course (the usual case).** Write five cards per episode: one lesson per episode, one unit per week, all in one personal course. Five matches WonkoLingo's default of five new cards a day per course, so each evening serves that morning's lesson with no setup. If the learner misses an evening the cards fall a day behind the audio; they never get ahead of it.
+- **Own course (the usual case).** Write five cards per episode: one lesson per episode, one unit per week, all in one personal course. Five matches WonkoLingo's default of five new cards a day per course, so each evening serves that morning's lesson with no setup. If the learner misses an evening, the cards fall a day behind the audio. If they miss a morning, the cards arrive anyway, which is why each one must work without the episode. Tell the learner both things at setup, and that listening late still helps: the episode then works as the review.
 - **A course WonkoLingo already has.** If the app already has a course on the week's theme, the episodes can follow its lessons in order and no new cards are needed. The learner switches that course on in their daily mix. You need the course's cards to do this (the learner can tell you the lesson titles, or you may have the course file); every episode has to teach every card in its lesson. If you cannot see the cards, write an own course instead.
 
 `references/wonkolingo.md` has the card rules, the file format, and the exact steps for the learner to add the course and each later week.
